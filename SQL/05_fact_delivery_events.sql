@@ -1,3 +1,4 @@
+
 ---------- fact_delivery_event ----------
 CREATE TABLE IF NOT EXISTS dw.fact_delivery_event (
     -- primary key

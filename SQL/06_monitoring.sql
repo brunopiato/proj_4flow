@@ -1,3 +1,4 @@
+
 ----- monitoring complaints -----
 CREATE TABLE IF NOT EXISTS dw.monitoring_complaints (
     metric_date DATE PRIMARY KEY,

@@ -1,6 +1,9 @@
+
 -- MAIN GOALS:
--- Pegar os arquivos que já estão na landing layer (e estão marcados como RECEIVED na landing_file), ler o conteúdo (CSV/XML/JSON), transformar em linhas “padronizadas” e inserir nas tabelas stg_delivery_event e stg_complaint
--- E ao final marcar o arquivo como PARSED (ou FAILED) na landing_file
+-- Read files marked as RECEIVED in the landing zone
+-- Read the CSV/XML/JSON content of each file
+-- Standardize the content of the files, inserting it into the correct table stg_delivery_event or stg_complaint
+-- By the end of the process mark the file as PARSED in the landing_file table
 
 
 ---------- iteratively scans the landing_file table ----------

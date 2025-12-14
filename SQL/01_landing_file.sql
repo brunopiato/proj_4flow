@@ -1,9 +1,10 @@
--- O que esse passo precisa resolver (em termos simples)
--- 1. Copiar os arquivos do file server para um local controlado (Landing)
--- 2. Guardar o arquivo original, sem alterar nada
--- 3. Registrar metadados sobre cada arquivo
--- 4. Evitar processar o mesmo arquivo duas vezes
--- 5. Saber o status de cada arquivo (novo, processado, erro)
+
+-- MAIN GOALS
+-- Copy files from central file server into the landing zone, saving the raw file
+-- Register each file's metadata
+-- Avoid to process the same file twice
+-- Follow the status of each file (RECEIVED, PARSED, FAILED)
+
 
 ---------- creating the landing schame ----------
 CREATE SCHEMA IF NOT EXISTS landing;

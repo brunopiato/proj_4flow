@@ -1,3 +1,4 @@
+
 -- MAIN GOALS
 -- Get a daily snapshot of the reference table and persist it in the staging zone
 -- Compare the snapshot with the actual dim_pickup_stations version
