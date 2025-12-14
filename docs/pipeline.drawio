@@ -4,11 +4,14 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-48" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry y="-185" width="1958" height="1037" as="geometry" />
+        </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-3" value="Staging zone" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="1031.5" y="100" width="194" height="644" as="geometry" />
+          <mxGeometry x="896.5" y="100" width="194" height="644" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-2" value="Landing zone" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="508.5" y="100" width="194" height="644" as="geometry" />
+          <mxGeometry x="436.5" y="100" width="194" height="644" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-1" value="Data sources" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="18" y="100" width="194" height="644" as="geometry" />
@@ -29,7 +32,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-36" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="248" y="464" width="175" height="119" as="geometry" />
+          <mxGeometry x="227" y="464" width="175" height="119" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-10" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Copies files from central file system into ADLS updating the &lt;i&gt;landing.landing_file&lt;/i&gt; table" style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-36" vertex="1">
           <mxGeometry x="29" y="32" width="146" height="87" as="geometry" />
@@ -38,7 +41,7 @@
           <mxGeometry width="47" height="47" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-37" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="516" y="378" width="168" height="121.42000000000007" as="geometry" />
+          <mxGeometry x="444" y="378" width="168" height="121.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-13" value="&lt;i&gt;/landing/delivery_events/&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;lt;timestamp&amp;gt;/&amp;lt;filename&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;or&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;/landing/complaints/&lt;/i&gt;&lt;div&gt;&lt;i&gt;&amp;lt;timestamp&amp;gt;/&amp;lt;filename&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-37" vertex="1">
           <mxGeometry x="22" y="34.420000000000016" width="146" height="87" as="geometry" />
@@ -47,7 +50,7 @@
           <mxGeometry width="35" height="46.05" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-38" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="521" y="558" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="449" y="558" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-20" value="Inserts data into&lt;div&gt;&lt;i&gt;landidng.landing_file&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-38" vertex="1">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -56,7 +59,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-39" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="770" y="461.91999999999996" width="182" height="124.5" as="geometry" />
+          <mxGeometry x="672" y="461.91999999999996" width="182" height="124.5" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-34" value="&lt;div&gt;Parses CSV/XML/JSON file content, standardizing columsn names, normalizing text data and calculating registry hashs.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-39" vertex="1">
           <mxGeometry x="36" y="37.5" width="146" height="87" as="geometry" />
@@ -71,7 +74,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-44" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="791" y="339" width="148" height="89" as="geometry" />
+          <mxGeometry x="693" y="339" width="148" height="89" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-43" value="Python parser in a container or function" style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-44" vertex="1">
           <mxGeometry x="28" y="29" width="120" height="60" as="geometry" />
@@ -83,10 +86,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-46" value="Trigger (schedule) &amp;gt;&amp;gt;&amp;gt; LookUp RECEIVED &amp;gt;&amp;gt;&amp;gt; Condition &amp;gt;&amp;gt;&amp;gt; Custom activity (Python)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="819" y="603" width="120" height="91" as="geometry" />
+          <mxGeometry x="721" y="603" width="120" height="91" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-47" value="Trigger (schedule) &amp;gt;&amp;gt;&amp;gt; Get Metadata &amp;gt;&amp;gt;&amp;gt; ForEach file &amp;gt;&amp;gt;&amp;gt; Copy Activity + Script Sctivity (INSERT)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="290" y="603" width="120" height="80" as="geometry" />
+          <mxGeometry x="269" y="603" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-59" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="36" y="377" width="159" height="325" as="geometry" />
@@ -128,7 +131,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-61" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="791" y="714" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="693" y="714" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-62" value="Updates&lt;div&gt;&lt;i&gt;landidng.landing_file changing RECEIVED to PARSED/FAILED according to its status.&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-61" vertex="1">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -140,7 +143,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-66" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1042" y="471" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="907" y="471" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="leNqX7ngAwT2YbCnkjUX-67" value="Inserts data into &lt;i&gt;staging&lt;/i&gt;&amp;nbsp;tables according to their source systems (delivery/complaints)." style="rounded=0;whiteSpace=wrap;html=1;" parent="leNqX7ngAwT2YbCnkjUX-66" vertex="1">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -152,7 +155,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-8" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="773.5" y="152.42000000000002" width="175" height="119" as="geometry" />
+          <mxGeometry x="675.5" y="152.42000000000002" width="175" height="119" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-9" value="Daily runs a SQL query to bring data from the reference table into a staging table." style="rounded=0;whiteSpace=wrap;html=1;" parent="JLR1P6yGaDx0zoHcYNqj-8" vertex="1">
           <mxGeometry x="29" y="32" width="146" height="87" as="geometry" />
@@ -164,10 +167,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-13" value="DW zone" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="1561" y="101" width="773" height="644" as="geometry" />
+          <mxGeometry x="1303" y="101" width="631" height="644" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-15" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1042" y="156" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="907" y="156" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-5" value="Inserts data into&lt;div&gt;&lt;i&gt;staging&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/i&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;i&gt;stg_pickup_station&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="JLR1P6yGaDx0zoHcYNqj-15" vertex="1">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -176,7 +179,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-16" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1569" y="112" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="1327" y="112" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-17" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.dim&lt;/i&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;i&gt;_pickup_station&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="JLR1P6yGaDx0zoHcYNqj-16" vertex="1">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -185,7 +188,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-19" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1299" y="153.20999999999998" width="175" height="119" as="geometry" />
+          <mxGeometry x="1108" y="153.20999999999998" width="175" height="119" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-20" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Daily runs a sequence of SQL queries to add new stations, update existing stations and deactivate removed stations." style="rounded=0;whiteSpace=wrap;html=1;" parent="JLR1P6yGaDx0zoHcYNqj-19" vertex="1">
           <mxGeometry x="29" y="32" width="146" height="87" as="geometry" />
@@ -205,11 +208,11 @@
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="leNqX7ngAwT2YbCnkjUX-34" target="leNqX7ngAwT2YbCnkjUX-46">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m5hBMKzTKyw0IVMpPyh4-3" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ASSUMPTIONS&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;IDs in the reference list of pickup locations are congruent with IDs in the complaints files, once they both came from the 4Flow system.&lt;/li&gt;&lt;li&gt;IDs in the delivery events files are not congruent with both reference and complaints data.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4 1 4;align=left;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="72" y="-284" width="336" height="217" as="geometry" />
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-3" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ASSUMPTIONS&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;IDs in the reference list of pickup locations are congruent with IDs in the complaints files, once they both came from the 4Flow system.&lt;/li&gt;&lt;li&gt;IDs in the delivery events files are not congruent with both reference and complaints data.&lt;/li&gt;&lt;li&gt;Delivery events and complaint files are in two separated folder in the central file system.&lt;/li&gt;&lt;li&gt;Pickup stations that are removed from the reference table are deactivated in the dimensional SCD2 table.&lt;/li&gt;&lt;li&gt;ID or fingerprint (name + address) identify a pickup station.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4 1 4;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="18" y="-165" width="336" height="217" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-4" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1579" y="359.21" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="1337" y="359.21" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-5" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.fact_complaints&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-4">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -218,7 +221,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-7" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1569" y="562" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="1327" y="562" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-8" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.fact_delivery_events&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-7">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -227,7 +230,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-11" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1299" y="467" width="175" height="119" as="geometry" />
+          <mxGeometry x="1108" y="467" width="175" height="119" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-12" value="Daily, after the &lt;i&gt;dim_pickup_station&lt;/i&gt;&amp;nbsp;was updated, updates the &lt;i&gt;dw.fact_complaints&lt;/i&gt;&amp;nbsp;and &lt;i&gt;dw.fact_delivery_events&lt;/i&gt;&amp;nbsp;&lt;div&gt;inserting new entries.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-11">
           <mxGeometry x="29" y="32" width="146" height="87" as="geometry" />
@@ -248,7 +251,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-25" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="2130" y="334.4200000000001" width="165" height="165" as="geometry" />
+          <mxGeometry x="1748" y="334.4200000000001" width="165" height="165" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-20" value="REPORT 1 (VIEW)&lt;div&gt;&lt;div&gt;Identifier, Name and Zip Code of Pickup locations affected by claims together with the according number of claims within the&lt;/div&gt;&lt;div&gt;last 14 calendar days&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-25">
           <mxGeometry x="19" y="28.419999999999987" width="146" height="136.58" as="geometry" />
@@ -257,7 +260,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-26" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="2134" y="518.21" width="165" height="195" as="geometry" />
+          <mxGeometry x="1752" y="518.21" width="165" height="195" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-23" value="&lt;div&gt;REPORT 2 (VIEW)&lt;/div&gt;&lt;div&gt;Name and address of final recipients with more than 5 complaints in the last two months and the given pickup locations of the&lt;/div&gt;&lt;div&gt;according complaints per recipient&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-26">
           <mxGeometry x="19" y="28.420000000000016" width="146" height="166.58" as="geometry" />
@@ -272,7 +275,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-38" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="2130" y="161.57999999999998" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="1748" y="161.57999999999998" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-39" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.monitoring_complaints&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-38">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -281,7 +284,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-43" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1860" y="158" width="175" height="119" as="geometry" />
+          <mxGeometry x="1547" y="158" width="175" height="119" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-44" value="After updating &lt;i&gt;dw.fact_complaints&lt;/i&gt;, updates a pickup station data integration monitoring table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-43">
           <mxGeometry x="29" y="32" width="146" height="87" as="geometry" />
