@@ -27,7 +27,7 @@ SELECT
     MIN(f.recipient_name)    AS recipient_name,                                                     -- final recipient name
     MIN(f.recipient_address) AS recipient_address,                                                  -- final recipient address
     COUNT(*)                 AS complaints_2m,                                                      -- number of complaints in the last two months
-    STRING_AGG(                                                                                     -- concatenated name, ID and zip code of the pickup stations
+    STRING_AGG(                                                                                     -- concatenated name, ID and zip code of the resolved pickup stations
         DISTINCT f.pickup_station_external_id, ' | ')
         FILTER (WHERE f.pickup_station_external_id IS NOT NULL) AS pickup_locations_given,
     STRING_AGG(                                                                                     -- concatenated name, ID and zip code enriched with reference ID pickup stations
