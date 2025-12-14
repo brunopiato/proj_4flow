@@ -12,9 +12,8 @@ CREATE SCHEMA IF NOT EXISTS landing;
 ------------ creating the landing_file table ------------
 CREATE TABLE landing.landing_file (
   file_id             BIGSERIAL PRIMARY KEY,                -- a serial number for file identification
-  -- source identification
-  source_system       TEXT NOT NULL,                        -- 'delivery_events' | 'complaints'
   -- metadata from the source file
+  source_system       TEXT NOT NULL,                        -- 'delivery_events' | 'complaints'
   source_file_path    TEXT NOT NULL,                        -- "\\fileserver\incoming\complaints\a.json"
   source_modified_at  TIMESTAMP NOT NULL,                   -- timestamp of modified at
   file_size_bytes     BIGINT NOT NULL,                      -- file size
