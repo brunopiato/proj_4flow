@@ -76,6 +76,10 @@ Key characteristics:
 
 The daily pipeline executes the following steps:
 
+![High-level pipeline architecture](docs/pipeline.png)
+
+*Figure: Daily ETL flow. Landing >>> Staging >>> Data Warehouse (SCD2, fact tables) >>> Reporting.*
+
 ### 4.1 Source → Landing
 - Files arrive via a central file server (CSV, JSON, XML)
 - Each file is registered in landing.landing_file
@@ -108,6 +112,12 @@ The daily pipeline executes the following steps:
 
 - Raw insert from staging.stg_delivery_event into dw.fact_delivery_event (idempotent)
 - No pickup station dimension enrichment is performed for delivery events in this simplified scope due to inconsistent identifiers
+
+<br>
+
+![Entity-Relationship Diagram for 4Flow](docs/ERD_4F.png)
+
+*Figure: ERD of the 4Flow data model.*
 
 ---
 
