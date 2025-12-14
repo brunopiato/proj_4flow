@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
   <diagram name="Page-1" id="SOOy5cKJJLh9m2Yd8_zU">
-    <mxGraphModel dx="1895" dy="2038" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1097" dy="1559" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -164,7 +164,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-13" value="DW zone" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="1561" y="101" width="194" height="644" as="geometry" />
+          <mxGeometry x="1561" y="101" width="773" height="644" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-15" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="1042" y="156" width="165" height="115.42000000000007" as="geometry" />
@@ -176,7 +176,7 @@
           <mxGeometry width="37.25" height="49.67" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-16" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1569" y="156" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="1569" y="112" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-17" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.dim&lt;/i&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;i&gt;_pickup_station&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="JLR1P6yGaDx0zoHcYNqj-16" vertex="1">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -199,9 +199,6 @@
         <mxCell id="JLR1P6yGaDx0zoHcYNqj-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="JLR1P6yGaDx0zoHcYNqj-20" target="JLR1P6yGaDx0zoHcYNqj-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="IzmU_uktE26f9chC4I-E-1" value="reporting zone" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="2015" y="100" width="195" height="644" as="geometry" />
-        </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="leNqX7ngAwT2YbCnkjUX-62" target="leNqX7ngAwT2YbCnkjUX-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -212,7 +209,7 @@
           <mxGeometry x="72" y="-284" width="336" height="217" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-4" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1569" y="357" width="165" height="115.42000000000007" as="geometry" />
+          <mxGeometry x="1579" y="359.21" width="165" height="115.42000000000007" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-5" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.fact_complaints&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-4">
           <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
@@ -248,6 +245,54 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="m5hBMKzTKyw0IVMpPyh4-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="JLR1P6yGaDx0zoHcYNqj-20" target="m5hBMKzTKyw0IVMpPyh4-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-25" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="2130" y="334.4200000000001" width="165" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-20" value="REPORT 1 (VIEW)&lt;div&gt;&lt;div&gt;Identifier, Name and Zip Code of Pickup locations affected by claims together with the according number of claims within the&lt;/div&gt;&lt;div&gt;last 14 calendar days&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-25">
+          <mxGeometry x="19" y="28.419999999999987" width="146" height="136.58" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-21" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-25">
+          <mxGeometry width="37.25" height="49.67" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-26" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="2134" y="518.21" width="165" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-23" value="&lt;div&gt;REPORT 2 (VIEW)&lt;/div&gt;&lt;div&gt;Name and address of final recipients with more than 5 complaints in the last two months and the given pickup locations of the&lt;/div&gt;&lt;div&gt;according complaints per recipient&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-26">
+          <mxGeometry x="19" y="28.420000000000016" width="146" height="166.58" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-24" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-26">
+          <mxGeometry width="37.25" height="49.67" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="m5hBMKzTKyw0IVMpPyh4-5" target="m5hBMKzTKyw0IVMpPyh4-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="m5hBMKzTKyw0IVMpPyh4-5" target="m5hBMKzTKyw0IVMpPyh4-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-38" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="2130" y="161.57999999999998" width="165" height="115.42000000000007" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-39" value="Updates data into&lt;div&gt;&lt;i&gt;dw&lt;/i&gt;&lt;i style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.monitoring_complaints&lt;/i&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-38">
+          <mxGeometry x="19" y="28.420000000000073" width="146" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-40" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-38">
+          <mxGeometry width="37.25" height="49.67" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-43" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1860" y="158" width="175" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-44" value="After updating &lt;i&gt;dw.fact_complaints&lt;/i&gt;, updates a pickup station data integration monitoring table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-43">
+          <mxGeometry x="29" y="32" width="146" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-45" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Data_Factory.svg;" vertex="1" parent="m5hBMKzTKyw0IVMpPyh4-43">
+          <mxGeometry width="47" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m5hBMKzTKyw0IVMpPyh4-5" target="m5hBMKzTKyw0IVMpPyh4-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5hBMKzTKyw0IVMpPyh4-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m5hBMKzTKyw0IVMpPyh4-44" target="m5hBMKzTKyw0IVMpPyh4-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
