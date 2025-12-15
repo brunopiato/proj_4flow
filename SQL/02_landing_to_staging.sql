@@ -7,7 +7,7 @@
 
 
 ---------- iteratively scans the landing_file table ----------
--- avoid concurrent processing
+-- avoid concurrent processing (batch reservation)
 UPDATE landing.landing_file                             -- updates the table
 SET status = 'PARSING',                                 -- with status = "PARSING" 
     updated_at = NOW()                                  -- with updated_at = current timestamp

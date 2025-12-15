@@ -29,7 +29,14 @@ CREATE TABLE IF NOT EXISTS staging.stg_pickup_station (
 
 -- loading data into staging.stg_pickup_station
 INSERT INTO staging.stg_pickup_station (
-    snapshot_date, ref_identifier, name, city, zip_code, street, fingerprint, attr_hash_sha256
+    snapshot_date,
+    ref_identifier,
+    name,
+    city,
+    zip_code,
+    street,
+    fingerprint,
+    attr_hash_sha256
 )
 SELECT
     -- control columns
@@ -53,7 +60,7 @@ SELECT
             'sha256'),
         'hex') AS attr_hash_sha256                              -- creates hash considering the describing columns
 FROM ref.pickup_locations
-ON CONFLICT (snapshot_date, ref_identifier) DO UPDATE           -- if conflicts with primary key, updates table with:
+ON CONFLICT (snapshot_date, ref_identifier) DO UPDATE           -- if it runs more than once a day, updates table with:
 SET
     name = EXCLUDED.name,                                       -- new entry of the name of the station 
     city = EXCLUDED.city,                                       -- new entry of the city of the station 
@@ -61,7 +68,6 @@ SET
     street = EXCLUDED.street,                                   -- new entry of the street of the station 
     fingerprint = EXCLUDED.fingerprint,                         -- new entry of the fingerprit of the station 
     attr_hash_sha256 = EXCLUDED.attr_hash_sha256;               -- new entry of the hash of the station 
-
 
 
 
