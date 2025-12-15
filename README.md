@@ -2,7 +2,7 @@
 
 ## 1. Context and Objective
 
-The company operates exclusively with deliveries to pickup stations and has recently observed an increase in customer complaints related to late or missing deliveries. The root causes are unclear.
+The company operates with deliveries to pickup stations and has recently observed an increase in customer complaints related to late or missing deliveries. The root causes are unclear.
 
 The objective of this solution is to design and implement a data pipeline and analytical model that enables:
 
@@ -19,7 +19,7 @@ The objective of this solution is to design and implement a data pipeline and an
 The solution is built on top of a relational Data Warehouse (PostgreSQL) and follows a layered architecture:
 
 - Landing layer: file ingestion control
-- Staging layer: normalized tabular data parsed from CSV, JSON, and XML
+- Staging layer: normalized tabular data parsed from CSV, JSON, and XML and ingestion of data from pickup station reference table.
 - Data Warehouse (DW):
     - Historical pickup station dimension (SCD Type 2)
     - Complaint fact table
@@ -32,43 +32,43 @@ The pipeline runs daily, ensuring idempotent ingestion, traceability, and consis
 
 ## 3. Data Model (High-Level)
 
-### 3.1 Dimension – dw.dim_pickup_station (SCD Type 2)
+### 3.1 Dimensional - `dw.dim_pickup_station` (SCD Type 2)
 
 This dimension stores the historical state of pickup stations over time.
 
 Key characteristics:
 
 - Slowly Changing Dimension Type 2
-- pickup_station_id as the internal canonical identifier
-- pickup_station_sk as the surrogate key per version
-- Validity tracking (valid_from, valid_to, is_current)
-- is_active flag for deactivated stations
+- `pickup_station_id` as the internal canonical identifier (station)
+- `pickup_station_sk` as the surrogate key per version (row)
+- Validity tracking (`valid_from`, `valid_to`, `is_current`)
+- `is_active` flag for deactivated stations
 - Deterministic fingerprint (e.g. zip code + street) to identify the same station when external identifiers change
 
-### 3.2 Fact – dw.fact_complaint
+### 3.2 Fact – `dw.fact_complaint`
 
 Stores individual complaint events.
 
 Key characteristics:
 
 - One row per complaint
-- Deduplication via record_hash_sha256
-- pickup_station_external_id preserved exactly as received
-- pickup_station_id populated later via enrichment when a reliable match exists
+- Deduplication via `record_hash_sha256`
+- `pickup_station_external_id` preserved exactly as received
+- `pickup_station_id` populated later via enrichment when a reliable match exists
 - Complaints without a valid pickup station match are not discarded
 
-### 3.3 Fact – dw.fact_delivery_event
+### 3.3 Fact – `dw.fact_delivery_event`
 
 Stores individual delivery events created by drivers when parcels are delivered to pickup stations.
 
 Key characteristics:
 
 - One row per delivery event
-- Deduplication via record_hash_sha256
-- Stores operational identifiers and event context: driver_id, parcel_id, purchase_order_id
-- Stores pickup_station_external_id as received in delivery event files
-- No reliable mapping to dw.dim_pickup_station in the simplified scope (identifier inconsistency), therefore pickup_station_id is not used for this dataset in the current design
-- Still useful for operational monitoring and correlation with complaints via parcel_id/purchase_order_id when present
+- Deduplication via `record_hash_sha256`
+- Stores operational identifiers and event context: `driver_id`, `parcel_id`, `purchase_order_id`
+- Stores `pickup_station_external_id` as received in delivery event files
+- No reliable mapping to `dw.dim_pickup_station` in the simplified scope (identifier inconsistency), therefore `pickup_station_id` is not used for this dataset in the current design
+- Still useful for operational monitoring and correlation with complaints via `parcel_id`/`purchase_order_id` when present
 
 ---
 
@@ -82,7 +82,7 @@ The daily pipeline executes the following steps:
 
 ### 4.1 Source → Landing
 - Files arrive via a central file server (CSV, JSON, XML)
-- Each file is registered in landing.landing_file
+- Each file is registered in `landing.landing_file`
 - Prevents reprocessing of the same file
 
 ### 4.2 Landing → Staging
@@ -90,8 +90,8 @@ The daily pipeline executes the following steps:
 - Field normalization
 - Generation of record_hash_sha256
 - Insertion into:
-    - staging.stg_complaint
-    - staging.stg_delivery_event
+    - `staging.stg_complaint`
+    - `staging.stg_delivery_event`
 
 ### 4.3 Staging → Data Warehouse
 
@@ -105,13 +105,13 @@ The daily pipeline executes the following steps:
 
 #### 4.3.2 Complaint Fact Load
 
-- Phase 1: raw insert from staging.stg_complaint into dw.fact_complaint (idempotent)
-- Phase 2: enrichment of pickup_station_id using the current pickup station dimension (direct match on complaint pickup station identifier in the simplified scenario)
+- Phase 1: raw insert from `staging.stg_complaint` into `dw.fact_complaint` (idempotent)
+- Phase 2: enrichment of `pickup_station_id` using the current pickup station dimension (direct match on complaint pickup station identifier in the simplified scenario)
 
 #### 4.3.3 Delivery Event Fact Load
 
-- Raw insert from staging.stg_delivery_event into dw.fact_delivery_event (idempotent)
-- No pickup station dimension enrichment is performed for delivery events in this simplified scope due to inconsistent identifiers
+- Raw insert from `staging.stg_delivery_event` into `dw.fact_delivery_event` (idempotent)
+- No pickup station dimension enrichment is performed for delivery events in this simplified scope due to inconsistent identifiers in reference table
 
 <br>
 
@@ -125,7 +125,7 @@ The daily pipeline executes the following steps:
 
 ### 5.1 Report 1 – Pickup Station Complaint Hotspots (Last 14 Days)
 
-View: *dw.rpt_pickup_station_claims_14d*
+View: `dw.rpt_pickup_station_claims_14d`
 
 Displays:
 
@@ -138,7 +138,7 @@ Only complaints successfully linked to the pickup station dimension are included
 
 ### 5.2 Report 2 – Recipients with More Than 5 Complaints (Last 2 Months)
 
-View: *dw.rpt_recipients_over5_complaints_2m*
+View: `dw.rpt_recipients_over5_complaints_2m`
 
 Displays:
 
@@ -169,10 +169,10 @@ Each row represents one recipient, aggregated across all their complaints.
 
 ## 7. Technical Justification
 
-- PostgreSQL was chosen for simplicity and strong analytical SQL support.
-- SCD Type 2 enables full historical tracking of pickup station changes.
-- Separating ingestion from enrichment improves robustness and debuggability.
-- Keeping dw.fact_delivery_event provides operational visibility and enables future correlation analysis (e.g., by parcel_id/purchase_order_id) even without a pickup station dimension join.
+- PostgreSQL was chosen for simplicity and strong analytical SQL support, being available in Microsoft Azure platform.
+- SCD Type 2 enables full historical tracking of pickup station changes, once historical data may be needed as stations change.
+- Separating ingestion from enrichment improves control, governance, robustness and debuggability.
+- Keeping `dw.fact_delivery_event` provides operational visibility and enables future correlation analysis (e.g., by `parcel_id`/`purchase_order_id`) even without a pickup station dimension join.
 - Reporting views provide a clean interface for BI tools or end users.
 - The modular pipeline design allows future extensions (e.g. adding a crosswalk, improving matching, or adding more data quality checks).
 
