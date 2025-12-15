@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS staging.stg_pickup_station (
     zip_code           TEXT,                          -- zip code of the station as provided by the reference table
     street             TEXT,                          -- street of the station as provided by the reference table
     -- columns for change detection
-    fingerprint        TEXT NOT NULL,                 -- normalized zip_code and street
-    attr_hash_sha256   TEXT NOT NULL,                 -- a fingerprint to test if any field has changed
+    fingerprint        TEXT NOT NULL,                 -- a fingerprint with normalized zip_code and street
+    attr_hash_sha256   TEXT NOT NULL,                 -- a hash to test if any field has changed
     -- key_definition
     PRIMARY KEY (snapshot_date, ref_identifier)       -- primary key definition
 );
@@ -63,8 +63,11 @@ SET
     attr_hash_sha256 = EXCLUDED.attr_hash_sha256;               -- new entry of the hash of the station 
 
 
+
+
 ---------- creating the dw schema ----------
 CREATE SCHEMA IF NOT EXISTS dw;
+
 
 ---------- dim_pickup_station ----------
 -- creates a sequence to be used in the pickup_station_id generation

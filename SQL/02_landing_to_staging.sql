@@ -7,11 +7,19 @@
 
 
 ---------- iteratively scans the landing_file table ----------
-SELECT file_id, source_system, landing_file_path    -- selects the columns that refer to the file
-FROM landing.landing_file
-WHERE status = 'RECEIVED'                           -- filtering only what has RECEIVED as status
-ORDER BY received_at                                -- ordering by received_at
-LIMIT 100;                                          -- limiting to 100 to avoid overload
+-- avoid concurrent processing
+UPDATE landing.landing_file                             -- updates the table
+SET status = 'PARSING',                                 -- with status = "PARSING" 
+    updated_at = NOW()                                  -- with updated_at = current timestamp
+WHERE file_id IN (                                      -- selects what file_id to treat
+    SELECT file_id, source_system, landing_file_path    -- selects the columns that refer to the file
+    FROM landing.landing_file
+    WHERE status = 'RECEIVED'                           -- filtering only what has RECEIVED as status
+    ORDER BY received_at                                -- ordering by received_at
+    LIMIT 100                                           -- limiting to 100 to avoid overload
+)
+RETURNING file_id, source_system, landing_file_path;    -- returns the fields that will be used by the parser
+
 
 
 ---------- creating the staging schema ----------
