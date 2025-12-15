@@ -79,8 +79,8 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 -- creates the dim_pickup_station table
 CREATE TABLE IF NOT EXISTS dw.dim_pickup_station (
     -- identification columns and keys
-    pickup_station_sk   BIGSERIAL PRIMARY KEY,          -- surrogate key for the dimension table
-    pickup_station_id   BIGINT NOT NULL,                -- canonical ID for the station pickup
+    pickup_station_sk   BIGSERIAL PRIMARY KEY,          -- surrogate key for the dimension table. defines the table row (version)
+    pickup_station_id   BIGINT NOT NULL,                -- canonical ID for the station pickup. defines the pickup station
     -- reference data
     ref_identifier      TEXT NOT NULL,                  -- identifier of the station as provided by the reference table
     name                TEXT,                           -- name of the station as provided by the reference table
