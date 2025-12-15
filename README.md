@@ -155,15 +155,14 @@ Each row represents one recipient, aggregated across all their complaints.
 ## 6. Assumptions and Limitations
 
 1.	Complaints are the primary data source for the requested reports.
-2.	Pickup station identifiers in complaints can be directly matched to the reference list (simplified scenario).
-3.	Pickup station identifiers in delivery events are not compatible with the reference list and are not linked to the pickup station dimension in this scope.
+2.	Pickup station identifiers in complaints can be directly matched to the reference list once they are both owned by the company.
+3.	Pickup station identifiers in delivery events are not compatible with the reference list and are not linked to the pickup station reference table.
 4.	No crosswalk table is maintained between external systems.
 5.	A simple fingerprint is sufficient to identify the same pickup station over time in the reference-driven dimension build.
-6.	Ambiguous fingerprint matches are out of scope.
-7.	The pipeline runs daily.
-8.	Data ingestion is idempotent.
-9.	Failed pickup station matches do not block complaint ingestion.
-10.	Reports are delivered in aggregated form (no per-event drill-down in scope).
+6.	The pipeline runs daily.
+7.	Data ingestion is idempotent.
+8.	Failed pickup station matches do not block complaint ingestion.
+9.	Reports are delivered in aggregated form (no per-event drill-down in scope).
 
 ---
 
@@ -194,23 +193,16 @@ All while maintaining simplicity, clarity, and robustness, aligned with the scop
 
 ## 9. Further steps
 
-- Monitoring
-    - AImplement pipeline-level monitoring to track ingestion volumes, processing success, and data quality metrics across stages.
+- **Monitoring**: Implement pipeline-level monitoring to track ingestion volumes, processing success, and data quality metrics across stages.
 
--  Complaint–delivery correlation
-    - Link complaints to delivery events via *parcel_id* or *purchase_order_id* whenever its possible to analyze delays and missing deliveries.
+- **Complaint–delivery correlation**: Link complaints to delivery events via *parcel_id* or *purchase_order_id* whenever its possible to analyze delays and missing deliveries.
 
-- Complaint rate analysis
-    - Compare complaint counts against delivery volumes to detect abnormal complaint ratios.
+- **Complaint rate analysis**: Compare complaint counts against delivery volumes to detect abnormal complaint ratios.
 
-- Driver-level insights
-    - Identify drivers associated with higher complaint frequency.
+- **Driver-level insights**: Identify drivers associated with higher complaint frequency.
 
-- Recipient behavior patterns
-    - Analyze delivery frequency versus complaint frequency per recipient.
+- **Recipient behavior patterns**: Analyze delivery frequency versus complaint frequency per recipient.
 
-- Pickup station mapping improvements
-    - Introduce crosswalk or probabilistic matching to link delivery events to pickup stations.
+- **Pickup station mapping improvements**: Introduce crosswalk or probabilistic matching to link delivery events to pickup stations.
 
-- Operational monitoring and alerts
-    - Define SLAs and trigger alerts when complaint thresholds are exceeded.
+- **Operational monitoring and alerts**: Define SLAs and trigger alerts when complaint thresholds are exceeded.
