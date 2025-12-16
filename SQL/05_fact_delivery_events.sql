@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS dw.fact_delivery_event (
     record_hash_sha256        TEXT NOT NULL UNIQUE,                                         -- a hash to guarantee entry uniqueness
     file_id                   BIGINT NOT NULL REFERENCES landing.landing_file(file_id),     -- reference to the landing_file.file_id
     -- delivery event data
-    delivered_at              TIMESTAMPTZ,                                                  -- 
+    delivered_at              TIMESTAMPTZ,                                                  -- timestamp of delivery
     pickup_station_external_id TEXT,                                                        
     driver_id                 TEXT,                                                         -- identifier of the driver as in the source file
     parcel_id                 TEXT,                                                         -- identifier of the parcel as in the source file
